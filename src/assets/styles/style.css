@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.date-picker,
+.department-input {
+    margin-bottom: 10px;
+}
+
+.load-data-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.load-data-button:hover {
+    background-color: #0056b3;
+}
+
+.loading-indicator {
+    display: none;
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.employee-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.employee {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.photo-name {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.employee-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.employee-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.employee-departments {
+    margin-left: auto;
+    font-weight: bold;
+    margin-right: 60px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.employee-earnings {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #006f06;
+    text-align: right;
+    width: 100px;
+    min-width: 100px;
+}
+
+.gold {
+    background-color: gold;
+}
+
+.silver {
+    background-color: silver;
+}
+
+.bronze {
+    background-color: #cd7f32;
+}
