@@ -5,7 +5,7 @@ import { APP_ID, FIELD_USER_GET_URL, REFRESH_TOKEN_URL } from '../config/config.
 
 export const getEmployeeList = async (req, res) => {
     try {
-        const tokenResponse = await fetch(`${REFRESH_TOKEN_URL}/${APP_ID}`);
+        const tokenResponse = await fetch(REFRESH_TOKEN_URL);
 
         if (!tokenResponse.ok) {
             throw new Error(`Failed to fetch refresh token: ${tokenResponse.statusText}`);

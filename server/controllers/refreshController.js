@@ -5,7 +5,7 @@ import { REFRESH_TOKEN_URL, APP_ID } from '../config/config.js';
 
 export const getRefreshToken = async (req, res) => {
     try {
-        const response = await fetch(`${REFRESH_TOKEN_URL}/${APP_ID}`);
+        const response = await fetch(REFRESH_TOKEN_URL);
 
         if (!response.ok) {
             throw new Error(`Failed to fetch refresh token: ${response.statusText}`);
