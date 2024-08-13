@@ -63,16 +63,16 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
         sudo apt install nano
         nano --version
         ```
-#### Change all .env.example to .env
-Return to the testbitrix24 folder and typing this.
-```bash
-cd public
-mv .env.example .env
-cd ..
-cd server
-mv .env.example .env
-
-```
+    #### Change all .env.example to .env
+    Return to the testbitrix24 folder and typing this.
+    ```bash
+    cd public
+    mv .env.example .env
+    cd ..
+    cd server
+    mv .env.example .env
+    
+    ```
 ### Step 1: Install NodeJS and NPM using nvm
 
 First, log in as the root user or a user with sudo privileges.
