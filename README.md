@@ -109,7 +109,7 @@ cd testbitrix24
     - BACKEND_SERVER_URL=<Your_Server_Url_Address>
     - PORT=<Port_That_Run_The_Frontend_Project>
     example:
-      BACKEND_SERVER_URL=http://localhost:5000/api/ # Localhost if the server is runing in the same machine.
+      BACKEND_SERVER_URL=http://eop.id.vn:5000/api/ 
       PORT=5001
   - **server**:
     - REFRESH_TOKEN_URL=https://bx-oauth2.aasc.com.vn/bx/oauth2_token #(ADT EasyOauth2 api, this is the api for getting refresh_token)
