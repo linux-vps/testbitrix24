@@ -57,13 +57,22 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
       APP_ID=local.myappid123456
       FIELD_USER_GET_URL=https://my.bitrix24.vn/rest/user.get.json
       PORT=5000
-   -  **How to change these file in terminal**
+   -  **How to edit these file in terminal**
         - Install nano:
         ```bash
         sudo apt install nano
         nano --version
         ```
 #### Change all .env.example to .env
+Return to the testbitrix24 folder and typing this.
+```bash
+cd public
+mv .env.example .env
+cd ..
+cd server
+mv .env.example .env
+
+```
 ### Step 1: Install NodeJS and NPM using nvm
 
 First, log in as the root user or a user with sudo privileges.
