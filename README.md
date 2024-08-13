@@ -57,7 +57,7 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
       APP_ID=local.myappid123456
       FIELD_USER_GET_URL=https://my.bitrix24.vn/rest/user.get.json
       PORT=5000
-    ##### How to change these file in terminal
+   -  **How to change these file in terminal**
         - Install nano:
         ```bash
         sudo apt install nano
