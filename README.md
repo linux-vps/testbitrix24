@@ -135,6 +135,7 @@ cd testbitrix24
     cd ..
     cd server
     mv .env.example .env
+    cd ..
     
     ```
 Now just run it
