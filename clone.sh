@@ -105,4 +105,70 @@ install_web_app(){
     # Navigate to the testbitrix24 folder
     cd testbitrix24
     echo ""
+
+    # Function to prompt user for input and set the value
+    prompt_for_variable() {
+        local var_name=$1
+        local prompt_message=$2
+        read -p "$prompt_message" var_value
+        echo "$var_name=$var_value"
+    }
+
+
+    # Ask if the user wants to input environment variables now
+    read -p "Do you want to configure environment variables now? (Y/n): " config_now
+
+    if [[ "$config_now" == "Y" || "$config_now" == "y" || "$config_now" == "yes" || "$config_now" == "Yes"]]; then
+        # Ask the user to input environment variables for public
+        echo "Setting up environment variables for the frontend..."
+        cd public
+
+        backend_server_url=$(prompt_for_variable "BACKEND_SERVER_URL" "Enter the backend server URL (e.g., http://yourdomain.com:5000/api): ")
+        port=$(prompt_for_variable "PORT" "Enter the frontend port (e.g., 5001): ")
+
+        # Write variables to .env file
+        echo -e "$backend_server_url\n$port" > .env
+
+        cd ..
+
+        # Ask the user to input environment variables for server
+        echo "Setting up environment variables for the backend..."
+        cd server
+
+        refresh_token_url=$(prompt_for_variable "REFRESH_TOKEN_URL" "Enter the refresh token URL: ")
+        app_id=$(prompt_for_variable "APP_ID" "Enter the application ID: ")
+        field_user_get_url=$(prompt_for_variable "FIELD_USER_GET_URL" "Enter the user get URL: ")
+        server_port=$(prompt_for_variable "PORT" "Enter the backend port (e.g., 5000): ")
+
+        # Write variables to .env file
+        echo -e "$refresh_token_url\n$app_id\n$field_user_get_url\n$server_port" > .env
+
+        cd ..
+
+        echo "Environment variables have been set."
+    else
+        echo "Skipping environment variable configuration. You can configure them later."
+        echo "Edit variables in each .env.example file of backend and frontend"
+        echo "Then rename rename them from .env.example to .env"
+    fi
+
+    echo "Install dependencies and start the web app..."
+    cd server
+    echo "Installing dependencies for backend"
+    npm install
+    cd ..
+
+    cd public
+    echo "Installing dependencies for frontend"
+    npm install
+    echo "Building webpack"
+    npm run build
+    cd .. 
+
+    
+
+
+
 }
+
+install_web_app
