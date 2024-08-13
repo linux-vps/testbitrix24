@@ -40,10 +40,16 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
 ## Installation
 
 ### Step 1: Install NodeJS and NPM using nvm
+
+First, log in as the root user or a user with sudo privileges.
+
+```bash
+sudo su
+```
+
 Install node version manager (nvm) by typing the following at the command line.
 
 ```bash
-sudo su -
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 Activate nvm by typing the following at the command line.
@@ -91,6 +97,10 @@ Run below command to clone the code repository from Github:
 git clone https://github.com/linux-vps/testbitrix24.git
 ```
 
+Navigate to the testbitrix24 first.
+```bash
+cd testbitrix24
+```
 Navigate to the server directory, install dependencies, and start the server:
 ```bash
 cd server
