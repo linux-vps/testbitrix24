@@ -98,7 +98,9 @@ install_web_app(){
     sudo apt install nano -y
 
     echo "Installing pm2..."
+    pm2 stop all
     npm install pm2 -g && pm2 update
+    pm2 stop all
 
     # Navigate to the testbitrix24 folder
     cd testbitrix24
