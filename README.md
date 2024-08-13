@@ -44,10 +44,21 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
   - **public**:
     - BACKEND_SERVER_URL=<Your_Server_Url_Address>
     - PORT=<Port_That_Run_The_Frontend_Project>
-    
+    example:
+      BACKEND_SERVER_URL=http://localhost:5000/api/ # Localhost if the server is runing in the same machine.
+      PORT=5001
   - **server**:
-    - BACKEND_SERVER_URL=<Your_Server_Url_Address>
-    - PORT=<Port_That_Run_The_Frontend_Project>
+    - REFRESH_TOKEN_URL=https://bx-oauth2.aasc.com.vn/bx/oauth2_token #(ADT EasyOauth2 api, this is the api for getting refresh_token)
+    - APP_ID=<your_app_id>
+    - FIELD_USER_GET_URL=https://<your_sub_domain>.bitrix24.vn/rest/user.get.json #(api Retrieves filtered list of users. read https://training.bitrix24.com/rest_help/users/user_get.php ) 
+    - PORT=5000
+    example:
+      REFRESH_TOKEN_URL=https://bx-oauth2.aasc.com.vn/bx/oauth2_token
+      APP_ID=local.myappid123456
+      FIELD_USER_GET_URL=https://my.bitrix24.vn/rest/user.get.json
+      PORT=5000
+      
+#### Change all .env.example to .env
 ### Step 1: Install NodeJS and NPM using nvm
 
 First, log in as the root user or a user with sudo privileges.
