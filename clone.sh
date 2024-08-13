@@ -104,5 +104,5 @@ install_web_app(){
 
     # Navigate to the testbitrix24 folder
     cd testbitrix24
-
+    echo ""
 }
