@@ -1,11 +1,11 @@
 // controllers/employeeController.js
 
 import fetch from 'node-fetch';
-import { FIELD_USER_GET_URL, REFRESH_TOKEN_URL } from '../config/config.js';
+import { APP_ID, FIELD_USER_GET_URL, REFRESH_TOKEN_URL } from '../config/config.js';
 
 export const getEmployeeList = async (req, res) => {
     try {
-        const tokenResponse = await fetch(REFRESH_TOKEN_URL);
+        const tokenResponse = await fetch(`${REFRESH_TOKEN_URL}/${APP_ID}`);
 
         if (!tokenResponse.ok) {
             throw new Error(`Failed to fetch refresh token: ${tokenResponse.statusText}`);

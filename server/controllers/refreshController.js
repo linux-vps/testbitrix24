@@ -1,11 +1,11 @@
 // controllers/refreshController.js
 
 import fetch from 'node-fetch';
-import { REFRESH_TOKEN_URL } from '../config/config.js';
+import { REFRESH_TOKEN_URL, APP_ID } from '../config/config.js';
 
 export const getRefreshToken = async (req, res) => {
     try {
-        const response = await fetch(REFRESH_TOKEN_URL);
+        const response = await fetch(`${REFRESH_TOKEN_URL}/${APP_ID}`);
 
         if (!response.ok) {
             throw new Error(`Failed to fetch refresh token: ${response.statusText}`);
