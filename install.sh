@@ -106,18 +106,6 @@ install_web_app(){
     cd testbitrix24
     echo "##########################################################"
 
-    echo "Install dependencies and build the web app..."
-    cd server
-    echo "Installing dependencies for backend"
-    npm install
-    cd ..
-
-    cd public
-    echo "Installing dependencies for frontend"
-    npm install
-    echo "Building webpack"
-    npm run build
-    cd .. 
     echo "##########################################################"
     # Function to prompt user for input and set the value
     prompt_for_variable() {
@@ -159,12 +147,35 @@ install_web_app(){
         cd ..
 
         echo "Environment variables have been set."
+
     else
         echo "Skipping environment variable configuration. You can configure them later."
         echo "Edit variables in each .env.example file of backend and frontend"
         echo "Then rename rename them from .env.example to .env"
     fi
 
+    echo "Install dependencies and build the web app..."
+    cd server
+    echo "Installing dependencies for backend"
+    npm install
+    cd ..
+
+    cd public
+    echo "Installing dependencies for frontend"
+    # Set timeout to 1 minute (60 seconds)
+    timeout 60s npm install
+
+    # Check if npm install was successful or timed out
+    if [ $? -eq 124 ]; then
+        echo "npm install was cancelled due to timeout. don't worrie, you can continue install later"
+    else
+        echo "Building webpack"
+        npm run build
+    fi
+    npm install
+    echo "Building webpack"
+    npm run build
+    cd .. 
     chmod +x deploy.sh
 
     echo -e "Run ${green} ./deploy.sh ${plain} to deploy!"
