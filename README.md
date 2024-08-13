@@ -137,6 +137,7 @@ cd testbitrix24
     mv .env.example .env
     
     ```
+Now just run it
 
 Navigate to the server directory, install dependencies, and start the server:
 ```bash
