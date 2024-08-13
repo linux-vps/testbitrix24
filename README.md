@@ -91,70 +91,19 @@ Run below command to clone the code repository from Github:
 git clone https://github.com/linux-vps/testbitrix24.git
 ```
 
-Get inside the directory and Install Packages
-
+Navigate to the server directory, install dependencies, and start the server:
 ```bash
-cd testbitrix24
+cd server
 npm install
+npm start
 ```
-
-Start the application
-To start the application, run the below command in the terminal:
-
+Open a new terminal, navigate to the public directory, install dependencies, build the project, and start the front-end:
 ```bash
+cd public
+npm install
+npm run build
 npm start
 ```
 
-## Keep the api alive
-Now, we will need to run the api 24/24 even when the EC2 console is closed
+## We can keep the web alive with PM2
 
-When you close the console tab in web view, even though the instance is still running, the code will not function properly
-
-### Step 1: Install PM2
-PM2 will help us continue running our code even after the terminal is closed
-
-Install PM2 by typing the following at the command line.
-
-```bash
-npm install pm2 -g && pm2 update
-```
-
-### Step 2: Run the code by PM2
-
-
-#### Here are some basic commands for PM2:
-
-pm2 start app.js: Start a Node.js application.
-
-pm2 stop app: Stop a running application.
-
-pm2 restart app: Restart an application.
-
-pm2 list: List all running processes.
-
-pm2 monit: Display a monitoring interface for all running processes.
-
-pm2 logs: View logs of running processes.
-
-pm2 delete app: Remove a process from PM2.
-
-
-#### In this project, we will use PM2 to start the server.js file:
-
-```bash
-pm2 start server.js
-```
-
-#### Retrieve all processes managed:
-
-```bash
-pm2 list
-```
-
-We will see our server.js file displayed in a table.
-
-#### To stop, we can use either the name or the ID from the previous table:
-
-```bash
-pm2 stop 0
-```
