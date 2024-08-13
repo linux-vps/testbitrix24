@@ -1,10 +1,11 @@
-## Demo
+## __DEMO:__
 
 [http://eop.id.vn:8823](http://eop.id.vn:8823)
 
 ## Description
 
-This project is a Node.js API deployed on AWS. It includes a directory structure organized for both client-side and server-side code. The application is built using Node.js, and the server is set up to handle API requests.
+Simple web app to display All name of users in Bitrix24 app (b24-7w9mjb.bitrix24.vn)
+Using NodeJS, for client and server. Display HTML by simple EJS view engine.
 
 ### Directory Structure
 
