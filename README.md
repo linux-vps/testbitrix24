@@ -7,6 +7,12 @@
 Simple web app to display All name of users in Bitrix24 app (b24-7w9mjb.bitrix24.vn)
 Using NodeJS, for client and server. Display HTML by simple EJS view engine.
 
+## Install & Upgrade
+paste this section bellow in your terminal.
+```
+bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+```
+
 ### Directory Structure
 
 - **Public**: Using NodeJS with EJS view engine. 
