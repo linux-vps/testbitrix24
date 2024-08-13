@@ -165,11 +165,9 @@ install_web_app(){
         echo "Then rename rename them from .env.example to .env"
     fi
 
+    chmod +x deploy.sh
 
-    echo " "
-
-
-
+    echo -e "Run ${green} ./deploy.sh ${plain} to deploy!"
 
 }
 

@@ -1,11 +1,3 @@
-echo "rename all file .env.example to .env..."
-cd public
-mv .env.example .env
-cd ..
-cd server
-mv .env.example .env
-cd ..
-
 echo "Install dependencies and start the web app..."
 cd server
 echo "Installing dependencies for backend"
