@@ -131,7 +131,7 @@ install_web_app(){
     # Ask if the user wants to input environment variables now
     read -p "Do you want to configure environment variables now? (Y/n): " config_now
 
-    if [[ "$config_now" == "Y" || "$config_now" == "y"]]; then
+    if [[ "$config_now" == "Y" || "$config_now" == "y" || "$config_now" == "yes" || "$config_now" == "Yes" ]]; then
         # Ask the user to input environment variables for public
         echo "Setting up environment variables for the frontend..."
         cd public
