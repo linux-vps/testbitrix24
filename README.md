@@ -38,7 +38,16 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
   - **routes**: API route definitions (`index.js`).
 
 ## Installation
-
+### Before starting: Prepare Environment variables.
+#### In each .env.example file in each directory
+- Change to your information variables with the following below:
+  - **public**:
+    - BACKEND_SERVER_URL=<Your_Server_Url_Address>
+    - PORT=<Port_That_Run_The_Frontend_Project>
+    
+  - **server**:
+    - BACKEND_SERVER_URL=<Your_Server_Url_Address>
+    - PORT=<Port_That_Run_The_Frontend_Project>
 ### Step 1: Install NodeJS and NPM using nvm
 
 First, log in as the root user or a user with sudo privileges.
