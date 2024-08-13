@@ -147,6 +147,7 @@ npm install
 npm start
 ```
 Open a new terminal, navigate to the public directory, install dependencies, build the project, and start the front-end:
+this can take long time and might show some warn, don't be worried about that. Keep waiting :D ...
 ```bash
 cd public
 npm install
