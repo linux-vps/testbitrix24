@@ -10,7 +10,7 @@ Using NodeJS, for client and server. Display HTML by simple EJS view engine.
 ## Install & Upgrade
 paste this section bellow in your terminal.
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/linux-vps/testbitrix24/main/install.sh)
 ```
 
 ### Directory Structure
